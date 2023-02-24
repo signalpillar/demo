@@ -16,3 +16,9 @@ dev/init-project:
 
 #  cd blog-starter-app
 #  npm run dev
+
+
+dev/try-unovis.dev:
+	# https://unovis.dev/docs/int
+	# learned about https://tailwindcss.com/docs/justify-content
+	npm install -P @unovis/ts @unovis/react

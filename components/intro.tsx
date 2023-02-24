@@ -1,14 +1,22 @@
 import { CMS_NAME } from '../lib/constants'
+import { VisSingleContainer, VisTooltip, VisDonut } from '@unovis/react'
 
 const Intro = () => {
+  const data = [50, 10, 40];
+  const donutValue = (d: number) => d;
+
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+    <section className="flex justify-start">
+        <VisSingleContainer data={data}>
+          <VisDonut value={donutValue}
+          radius={50}
+          centralLabel="Blog."
+          />
+        </VisSingleContainer>
+
+      {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         A statically generated blog example using Next.js and {CMS_NAME}.
-      </h4>
+      </h4> */}
     </section>
   )
 }
